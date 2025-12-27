@@ -7,16 +7,16 @@ pipeline {
                 bat 'npm install'
             }
         }
-
+        
         stage('Run test') {
             steps {
-                bat 'npm test -- --watch=false'
+                bat 'set CI=true && npm test'
             }
         }
 
         stage('Build project') {
             steps {
-                bat 'npm run build '
+                bat 'npm run build'
             }
         }
     }
