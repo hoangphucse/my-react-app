@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import TodoItem from './TodoItem';
 
-test('TodoItem should call toggleTodo and removeTodo', () => {
+test('TodoItem should call toggleTodo and removeTodo 1', () => {
   const todo = { text: 'Test Todo', isCompleted: false };
   const toggleTodo = jest.fn();
   const removeTodo = jest.fn();

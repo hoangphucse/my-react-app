@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import TodoForm from './TodoForm';
 
-test('TodoForm should call addTodo when form is submitted', () => {
+test('TodoForm should call addTodo when form is submitted 1', () => {
     // const addTodo = jest.fn();
     // const { getByPlaceholderText, getByRole } = render(<TodoForm addTodo={addTodo} />);
     // const input = getByPlaceholderText('Add a new todo');

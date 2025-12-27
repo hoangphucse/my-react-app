@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('full todo app flow', () => {
+test('full todo app flow 1', () => {
     //   // const { getByPlaceholderText, getByText, getAllByText } = render(<App />);
     //   // const input = getByPlaceholderText('Add a new todo');
     //   // const form = input.closest('form');
