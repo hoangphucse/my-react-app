@@ -1,23 +1,47 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
 function App() {
+  const [todos, setTodos] = useState([
+    {
+      text: 'Learn about React',
+      isCompleted: false,
+    },
+    {
+      text: 'Meet friend for lunch',
+      isCompleted: false,
+    },
+    {
+      text: 'Build really cool todo app',
+      isCompleted: false,
+    },
+  ]);
+
+  const addTodo = text => {
+    const newTodos = [...todos, { text }];
+    setTodos(newTodos);
+  };
+
+  const toggleTodo = index => {
+    const newTodos = [...todos];
+    newTodos[index].isCompleted = !newTodos[index].isCompleted;
+    setTodos(newTodos);
+  };
+
+  const removeTodo = index => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="todo-list">
+        <TodoList todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo} />
+        <TodoForm addTodo={addTodo} />
+      </div>
     </div>
   );
 }
