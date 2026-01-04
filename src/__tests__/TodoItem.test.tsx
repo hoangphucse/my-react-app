@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import TodoItem from './TodoItem';
-import { Todo } from './types';
+import TodoItem from '../TodoItem';
+import { Todo } from '../types';
 
 const mockTodo: Todo = {
   id: 1,
