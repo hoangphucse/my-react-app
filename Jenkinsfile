@@ -21,7 +21,7 @@ pipeline {
         stage('Run tests') {
             steps {
                 echo '🧪 Running tests...'
-                bat 'CI=true npm test'
+                bat 'npm run test:ci'
                 echo '✅ Tests passed.'
             }
         }
