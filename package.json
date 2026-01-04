@@ -24,6 +24,9 @@
     "eject": "react-scripts eject",
     "type-check": "tsc --noEmit"
   },
+  "jest": {
+    "testMatch": ["<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}"]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
