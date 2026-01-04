@@ -39,6 +39,32 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Environment Variables
+
+This app uses environment variables for configuration. Create React App automatically loads variables that start with `REACT_APP_`.
+
+### Setup
+
+1. Copy `.env.example` to `.env.local` for local development
+2. Modify the values as needed
+3. For production/CI, set these variables in your deployment environment
+
+### Available Variables
+
+- `REACT_APP_APP_TITLE`: The title displayed in the app (default: "Todo App")
+- `REACT_APP_ENABLE_DEBUG_MODE`: Show debug information (default: false)
+- `REACT_APP_API_BASE_URL`: Base URL for API calls (for future backend integration)
+- `REACT_APP_MAX_TODOS`: Maximum number of todos allowed (default: 100)
+
+### Example
+
+```bash
+# .env.local
+REACT_APP_APP_TITLE=My Custom Todo App
+REACT_APP_ENABLE_DEBUG_MODE=true
+REACT_APP_MAX_TODOS=25
+```
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

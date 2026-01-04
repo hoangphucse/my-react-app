@@ -1,6 +1,12 @@
 pipeline {
     agent any
 
+    environment {
+        // secret from Jenkins Credentials
+        REACT_APP_APP_TITLE = credentials('REACT_APP_APP_TITLE')
+        REACT_APP_MAX_TODOS = credentials('REACT_APP_MAX_TODOS')
+    }
+
     stages {
         stage('Install dependencies') {
             steps {
